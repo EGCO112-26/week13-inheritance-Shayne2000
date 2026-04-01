@@ -2,18 +2,30 @@
 using namespace std;
 #include "student.h"
 
-int main(){
-MU_Person m;
- 
-	//student m1(6613121,2,"Vivi"),m2(112),m3;
- // student m1(6613118,3.9,"Atom");
-//student m2(6613112),m3,*p;
-  //m1.display(); // id gpa name
-  cout<<endl<<"======="<<endl;
-  //m1.display_person(); //id
+int main(int argc,char **argv){
+// MU_person m;
+int N = (argc -1) / 3 ;
 
-//  p=new student(6613265,1.7,"Hok");
- // delete p;
+LL link ;
+ 
+	// student m1(12,3.0,"Vivi");
+  // LL link(&m1);
+
+  // student m2(120,3.1,"test");
+  // link.addNode(&m2);
+  Node *t;
+  // cout<<N;
+  for (int i = 0 ; i < N ; i ++) {
+    t=new student(atoi(argv[3*i+1]),atof(argv[3*i+2]),argv[3*i+3]);
+    link.addNode(t);
+  }
+
+
+  cout<<endl;
+
+  link.displayLL();
+
+  cout<<endl;
   
   return 0;
    }
